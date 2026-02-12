@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  release:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version
+        id: version
+        run: |
+          version=$(grep -oP "addon\.version\s*=\s*'\K[^']+" grimoire.lua)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Detected version: $version"
+
+      - name: Package addon
+        run: |
+          mkdir -p grimoire
+          cp grimoire.lua ui.lua grimoire/
+          cp -r data grimoire/
+          zip -r grimoire-v${{ steps.version.outputs.version }}.zip grimoire/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Grimoire v${{ steps.version.outputs.version }}
+          body: |
+            ## Grimoire v${{ steps.version.outputs.version }}
+
+            ### Installation
+            1. Download `grimoire-v${{ steps.version.outputs.version }}.zip`
+            2. Extract the `grimoire` folder into your Ashita `addons` directory
+            3. In-game: `/addon load grimoire`
+          files: grimoire-v${{ steps.version.outputs.version }}.zip
+          make_latest: true
