@@ -9,9 +9,9 @@
 
 addon.name      = 'grimoire';
 addon.author    = 'Nybs';
-addon.version   = '1.0';
+addon.version   = '1.0.1';
 addon.desc      = 'Spell compendium - track known/unknown spells with acquisition info.';
-addon.link      = 'https://www.bg-wiki.com/ffxi/Category:Spells';
+addon.link      = 'https://github.com/glitchv0/grimoire';
 
 require('common');
 local chat = require('chat');
