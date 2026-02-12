@@ -20,5 +20,5 @@ An Ashita addon for FFXI that provides a searchable spell compendium with acquis
 
 The spell acquisition data (vendor locations, quest info, drop sources) may contain errors or become outdated. If you find incorrect information:
 
-- **GitHub Issues**: Open an issue at [github.com/glitchv0/grimoire](https://github.com/glitchv0/grimoire/issues) with the spell name and correct info
+- **GitHub Issues**: Open an issue at [github.com/glitchv0/grimoire](https://github.com/glitchv0/grimoire/issues) with the spell name and correct info (also a link at the bottom of each spell in game)
 - **Discord**: Send a DM to **glitchv0** on Discord
