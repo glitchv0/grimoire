@@ -1,58 +1,24 @@
-# Grimoire
+# Grimoire - Spell Compendium
 
-A spell compendium addon for [Ashita v4](https://www.ashitaxi.com/) that tracks known and unknown spells for your character in Final Fantasy XI, with acquisition info and BG-Wiki integration.
-
-![Ashita v4](https://img.shields.io/badge/Ashita-v4-blue)
+An Ashita addon for FFXI that provides a searchable spell compendium with acquisition info, job filtering, and progress tracking.
 
 ## Features
 
-- **Spell tracking** - See all learnable spells with known/unknown status at a glance
-- **Job filtering** - Filter spells by your current job/sub or any magic-using job
-- **Categorized tabs** - Browse by category: All, Missing, White, Black, Songs, Ninjutsu, Summoning, Blue Magic
-- **Search** - Quickly find spells by name
-- **Spell details** - View MP cost, cast time, recast, element, school, and which jobs can learn each spell
-- **Acquisition info** - See where to obtain spells (NPC vendors, quests, drops, AH)
-- **BG-Wiki links** - Open any spell's BG-Wiki page directly from the addon
-- **Auto-refresh** - Spell data updates automatically on zone change and spell list updates
-
-## Installation
-
-1. Download the latest release from the [Releases](https://github.com/glitchv0/grimoire/releases) page.
-2. Extract the `grimoire` folder into your Ashita `addons` directory:
-   ```
-   Ashita/addons/grimoire/
-   ```
-3. In-game, load the addon:
-   ```
-   /addon load grimoire
-   ```
+- Browse all magic spells with job/level requirements
+- Filter by current job, specific job, or view all
+- Track known vs unknown spells with progress percentages
+- Tabs for White, Black, Songs, Ninjutsu, Summoning, and Blue Magic
+- Spell detail pane with acquisition info (vendors, quests, drops)
+- BG-Wiki integration for quick lookups
 
 ## Usage
 
-| Command | Description |
-|---|---|
-| `/grimoire` or `/grim` | Toggle the spell compendium window |
-| `/grim refresh` | Force refresh spell data |
+- `/grimoire` or `/grim` - Toggle the window
+- `/grim refresh` - Refresh spell data
 
-### Window Controls
+## Reporting Incorrect Data
 
-- **Job dropdown** - Filter by a specific job or "All" for your current main/sub job
-- **Show dropdown** - Filter by All / Known / Unknown spells
-- **Search box** - Type to filter spells by name
-- **Refresh button** - Manually refresh spell data
+The spell acquisition data (vendor locations, quest info, drop sources) may contain errors or become outdated. If you find incorrect information:
 
-Click any spell in the list to view its details in the right pane, including how to obtain it and a button to open its BG-Wiki page.
-
-## Project Structure
-
-```
-grimoire/
-├── grimoire.lua          # Addon entry point and event handlers
-├── ui.lua                # ImGui rendering and spell data management
-└── data/
-    └── acquisition.lua   # Spell acquisition source data (vendors, quests, drops)
-```
-
-## License
-
-This project is provided as-is for use with Ashita v4 and Final Fantasy XI.
+- **GitHub Issues**: Open an issue at [github.com/glitchv0/grimoire](https://github.com/glitchv0/grimoire/issues) with the spell name and correct info
+- **Discord**: Send a DM to **glitchv0** on Discord

@@ -45,14 +45,7 @@ local tabs = {
 };
 
 -- Jobs that use magic (for the filter dropdown)
-local magic_jobs = { 0, 3, 4, 5, 7, 8, 10, 13, 15, 16, 17, 20, 21, 22 };
-
--- Build the job combo string for ImGui
-local job_combo_items = T{};
-for i = 1, #magic_jobs do
-    job_combo_items:append(job_names[magic_jobs[i]] or '???');
-end
-local job_combo_str = job_combo_items:concat('\0') .. '\0';
+local magic_jobs = { 3, 4, 5, 7, 8, 10, 13, 15, 16, 17, 20, 21, 22 };
 
 ----------------------------------------------------------------------------------------------------
 -- UI State
@@ -155,9 +148,14 @@ function ui.get_spell_level(spell)
     if (player == nil) then return spell.min_lvl; end
 
     local job_idx = ui.selected_job[1];
-    if (job_idx > 0) then
-        local job = magic_jobs[job_idx + 1];
+    if (job_idx >= 2) then
+        local job = magic_jobs[job_idx - 1];
         return spell.jobs[job] or nil;
+    end
+
+    -- All mode: show min level..
+    if (job_idx == 1) then
+        return spell.min_lvl;
     end
 
     -- Current job mode..
@@ -178,8 +176,8 @@ function ui.get_filtered_spells(tab)
     local sub_job_lvl  = player:GetSubJobLevel();
     local job_idx      = ui.selected_job[1];
     local job_filter   = nil;
-    if (job_idx > 0) then
-        job_filter = magic_jobs[job_idx + 1];
+    if (job_idx >= 2) then
+        job_filter = magic_jobs[job_idx - 1];
     end
 
     local search = ui.search_buf[1]:lower();
@@ -339,6 +337,15 @@ function ui.render_spell_detail()
     else
         imgui.TextColored({ 0.5, 0.5, 0.5, 1.0 }, 'Use BG-Wiki button for details.');
     end
+
+    -- Report incorrect data..
+    imgui.Separator();
+    if (imgui.Button('Report Incorrect Data')) then
+        local url_name = res.Name[1]:gsub(' ', '+');
+        ashita.misc.open_url(('https://github.com/glitchv0/grimoire/issues/new?title=Incorrect+data:+%s'):fmt(url_name));
+    end
+    imgui.SameLine();
+    imgui.TextColored({ 0.5, 0.5, 0.5, 1.0 }, 'or DM glitchv0 on Discord');
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -416,9 +423,20 @@ function ui.render()
     imgui.SetNextWindowSizeConstraints({ 750, 520 }, { FLT_MAX, FLT_MAX });
 
     if (imgui.Begin('Grimoire - Spell Compendium', ui.is_open, ImGuiWindowFlags_NoResize)) then
-        -- Top control bar..
+        -- Top control bar: build job combo dynamically to show current job name..
+        local player_combo = AshitaCore:GetMemoryManager():GetPlayer();
+        local cur_job_name = '???';
+        if (player_combo ~= nil) then
+            cur_job_name = job_names[player_combo:GetMainJob()] or '???';
+        end
+        local combo_items = T{ cur_job_name, 'All' };
+        for i = 1, #magic_jobs do
+            combo_items:append(job_names[magic_jobs[i]] or '???');
+        end
+        local job_combo_str = combo_items:concat('\0') .. '\0';
+
         imgui.PushItemWidth(120);
-        imgui.Combo('Job##job_filter', ui.selected_job, job_combo_str, #magic_jobs);
+        imgui.Combo('Job##job_filter', ui.selected_job, job_combo_str, #magic_jobs + 2);
         imgui.PopItemWidth();
 
         imgui.SameLine();

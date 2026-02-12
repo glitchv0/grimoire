@@ -9,7 +9,7 @@
 
 addon.name      = 'grimoire';
 addon.author    = 'Nybs';
-addon.version   = '1.0.1';
+addon.version   = '1.0.2';
 addon.desc      = 'Spell compendium - track known/unknown spells with acquisition info.';
 addon.link      = 'https://github.com/glitchv0/grimoire';
 
