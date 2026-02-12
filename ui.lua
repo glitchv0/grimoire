@@ -334,6 +334,11 @@ function ui.render_spell_detail()
             imgui.TextColored({ 1.0, 1.0, 1.0, 1.0 }, '  ' .. acq.other);
         end
         imgui.PopTextWrapPos();
+    elseif (res.Skill == 43) then
+        imgui.PushTextWrapPos(imgui.GetFontSize() * 18.0);
+        imgui.TextColored({ 0.4, 0.8, 1.0, 1.0 }, 'Blue Magic spells are learned from monsters.');
+        imgui.TextColored({ 0.5, 0.5, 0.5, 1.0 }, 'Try the BluCheck or BluMon addons for tracking.');
+        imgui.PopTextWrapPos();
     else
         imgui.TextColored({ 0.5, 0.5, 0.5, 1.0 }, 'Use BG-Wiki button for details.');
     end

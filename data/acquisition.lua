@@ -1,7 +1,7 @@
 --[[
 * Grimoire - Spell Acquisition Data
 * Maps spell names to acquisition sources (vendors, quests, drops).
-* Focused on 75-era content. Check BG-Wiki for the most current info.
+* Auto-generated from BG-Wiki (https://www.bg-wiki.com/ffxi/).
 *
 * Fields:
 *   vendor = NPC name (Location)
@@ -16,450 +16,640 @@ local acq = {};
 -- Healing Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Cure"]       = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Cure II"]    = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Cure III"]   = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Cure IV"]    = { vendor = "Quelpia (Lower Jeuno) / Macki (Aht Urhgan Whitegate)", other = "Auction House" };
-acq["Cure V"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Cure VI"]    = { other = "Auction House", drop = "Ix'DRG (Abyssea)" };
-acq["Curaga"]     = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Curaga II"]  = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Curaga III"] = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Curaga IV"]  = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Curaga V"]   = { other = "Auction House (rare)" };
-acq["Regen"]      = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Regen II"]   = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Regen III"]  = { other = "Auction House", drop = "Various high-level mobs" };
-
-----------------------------------------------------------------------------------------------------
--- Raise / Reraise / Arise
-----------------------------------------------------------------------------------------------------
-
-acq["Raise"]       = { vendor = "Regine (Port San d'Oria) / Quelpia (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Raise II"]    = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Raise III"]   = { other = "Auction House (very rare)", drop = "Various HNMs" };
-acq["Reraise"]     = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Reraise II"]  = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Reraise III"] = { other = "Auction House (rare)", drop = "Various HNMs" };
+acq["Arise"] = { vendor = "Emporox (Reisenjima)", quest = "Mog Bonanza Homecoming - Rank 2 Prize", drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Mnejing (Jade Sepulcher) / Provenance Watcher (Provenance) / Slimey Simeon (Sacrificial Chamber)", other = "Auction House" };
+acq["Blindna"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Cura"] = { vendor = "Brave Ox (Rabao)", drop = "Spring Sahagin (Sea Serpent Grotto) / River Sahagin (Yuhtunga Jungle) / Garnet Quadav (Beadeaux)", other = "Auction House" };
+acq["Cura II"] = { vendor = "Brave Ox (Rabao)", quest = "Something in the Air" };
+acq["Cura III"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Veiled Gigaworm (Maquette Abdhaljs-Legion) / Soaring Kumakatok (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Curaga"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Curaga II"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi) / Quelpia (Selbina)" };
+acq["Curaga III"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Curaga IV"] = { drop = "Novv the Whitehearted (Sea Serpent Grotto) / Foreseer Oramix (Ifrit's Cauldron) / Yagudo High Priest (Castle Oztroja) / Goblin Alchemist (Ifrit's Cauldron) / Lagoon Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Curaga V"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Cure"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Cure II"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest] / Quelpia (Selbina)" };
+acq["Cure III"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) / Quelpia (Selbina)" };
+acq["Cure IV"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Cure V"] = { drop = "Foreseer Oramix (Ifrit's Cauldron) / Novv the Whitehearted (Sea Serpent Grotto) / Yagudo High Priest (Castle Oztroja) / Diamond Quadav (Qulun Dome) / Goblin Alchemist (Labyrinth of Onzozo)", other = "Auction House" };
+acq["Cure VI"] = { vendor = "Brave Ox (Rabao)", drop = "Vemosia (Cirdas Caverns) / Furious Arundmite (Sih Gates) / Cowll Hippogryph (Woh Gates) / Stinkskin (Moh Gates)", other = "Auction House" };
+acq["Cursna"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Esuna"] = { vendor = "Brave Ox (Rabao)", drop = "Goblin Alchemist (Cape Teriggan) / Lagoon Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Full Cure"] = { other = "Auction House" };
+acq["Paralyna"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Poisona"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Raise"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Raise II"] = { drop = "Coral Sahagin (Sea Serpent Grotto) / Diamond Quadav (Qulun Dome) / Yagudo High Priest (Castle Oztroja)", other = "Auction House" };
+acq["Raise III"] = { drop = "Za'Dha Adamantking (Qulun Dome) / Slimey Simeon (Sacrificial Chamber) / Ro'Mho Unrelenting (Waughroon Shrine) / Zi'Pha Foecrippler (Waughroon Shrine) / Ga'Khu Bloodglee (Waughroon Shrine)", other = "Auction House" };
+acq["Reraise"] = { drop = "Topaz Quadav (Castle Zvahl Keep) / Garnet Quadav (Beadeaux) / Yagudo Abbot (Castle Oztroja)", other = "Auction House" };
+acq["Reraise II"] = { drop = "Hellish Weapon (Fei'Yin)", other = "Auction House" };
+acq["Reraise III"] = { vendor = "Dabih Jajalioh (Ru'Lude Gardens) / Zafif (Al Zahbi) / Brave Ox (Rabao)", drop = "Coral Sahagin (Sea Serpent Grotto) / Yagudo High Priest (Castle Oztroja) / Goblin Alchemist (Labyrinth of Onzozo) / Yarr the Pearleyed (Sea Serpent Grotto)", other = "Auction House" };
+acq["Reraise IV"] = { other = "Auction House" };
+acq["Sacrifice"] = { vendor = "Brave Ox (Rabao)", drop = "Goblin Alchemist (Labyrinth of Onzozo)", other = "Auction House" };
+acq["Silena"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Stona"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Viruna"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
 
 ----------------------------------------------------------------------------------------------------
 -- Divine Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Banish"]      = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Banish II"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Banish III"]  = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Banishga"]    = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno)" };
-acq["Banishga II"] = { other = "Auction House" };
-acq["Holy"]        = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Flash"]       = { quest = "Shining Souls (San d'Oria)", other = "Auction House" };
-acq["Reprisal"]    = { other = "Auction House" };
-acq["Crusade"]     = { other = "Auction House" };
+acq["Banish"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Banish II"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Banish III"] = { vendor = "Nilerouche (Tavnazian Safehold) / Mazuro-Oozuro (Tavnazian Safehold) / Brave Ox (Rabao)", drop = "Coral Sahagin (Sea Serpent Grotto) / Lagoon Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Banish IV"] = { other = "Auction House" };
+acq["Banishga"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Banishga II"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Enlight"] = { vendor = "Mamaroon (Nashmau)", drop = "Jasweem (Jade Sepulcher) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater) / Furious Arundmite (Sih Gates) / Ark Angel HM (La'Loff Amphitheater)", other = "Auction House" };
+acq["Enlight II"] = { other = "Auction House" };
+acq["Flash"] = { vendor = "Zafif (Al Zahbi) / Brave Ox (Rabao)", drop = "Iron Quadav (Castle Zvahl Keep) / Steel Quadav (Castle Zvahl Keep) / Orcish Trooper (Castle Zvahl Baileys) / Orcish Warchief (Monastic Cavern)", other = "Auction House" };
+acq["Holy"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi) / Quelpia (Selbina)" };
+acq["Holy II"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Repose"] = { vendor = "Sororo (Bastok Markets)" };
 
 ----------------------------------------------------------------------------------------------------
--- Status Removal (White)
+-- Enhancing Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Poisona"]  = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Paralyna"] = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Blindna"]  = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Silena"]   = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Stona"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Viruna"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Cursna"]   = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Erase"]    = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Esuna"]    = { other = "Auction House" };
-
-----------------------------------------------------------------------------------------------------
--- Enhancing Magic (Protect/Shell)
-----------------------------------------------------------------------------------------------------
-
-acq["Protect"]      = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Protect II"]   = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Protect III"]  = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Protect IV"]   = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Protect V"]    = { other = "Auction House (rare)" };
-acq["Shell"]        = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Shell II"]     = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Shell III"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Shell IV"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Shell V"]      = { other = "Auction House (rare)" };
-acq["Protectra"]    = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Protectra II"] = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno)" };
-acq["Protectra III"]= { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Protectra IV"] = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Protectra V"]  = { other = "Auction House (rare)" };
-acq["Shellra"]      = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Shellra II"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Shellra III"]  = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Shellra IV"]   = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Shellra V"]    = { other = "Auction House (rare)" };
-
-----------------------------------------------------------------------------------------------------
--- Enhancing Magic (Buffs)
-----------------------------------------------------------------------------------------------------
-
-acq["Blink"]        = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Stoneskin"]    = { quest = "The Rumor (Selbina)", other = "Auction House" };
-acq["Phalanx"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Phalanx II"]  = { other = "Auction House" };
-acq["Aquaveil"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Haste"]       = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Refresh"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Invisible"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Sneak"]       = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Deodorize"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Auspice"]     = { other = "Auction House" };
-
-----------------------------------------------------------------------------------------------------
--- Enhancing Magic (Bar-spells)
-----------------------------------------------------------------------------------------------------
-
-acq["Barfire"]      = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Barblizzard"]  = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Baraero"]      = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Barstone"]     = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Barthunder"]   = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Barwater"]     = { vendor = "Regine (Port San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Barsleep"]     = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barpoison"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barparalyze"]  = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barblind"]     = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barsilence"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barpetrify"]   = { other = "Auction House" };
-acq["Barvirus"]     = { other = "Auction House" };
-acq["Barfira"]      = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barblizzara"]  = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Baraera"]      = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barstonra"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barthundra"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barwatera"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Barsleepra"]   = { vendor = "Hasim (Lower Jeuno)" };
-acq["Barpoisonra"]  = { vendor = "Hasim (Lower Jeuno)" };
+acq["Adloquium"] = { vendor = "Silke (Bastok Markets (S))" };
+acq["Animus Augeo"] = { vendor = "Silke (Bastok Markets (S))" };
+acq["Animus Minuo"] = { vendor = "Silke (Bastok Markets (S))" };
+acq["Aquaveil"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst)" };
+acq["Aurorastorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Aurorastorm II"] = { other = "Auction House" };
+acq["Auspice"] = { vendor = "Brave Ox (Rabao)", drop = "Topaz Quadav (Castle Zvahl Keep) / Rivulet Sahagin (Sea Serpent Grotto) / Yagudo Abbot (Castle Zvahl Keep)", other = "Auction House" };
+acq["Baraera"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Baraero"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Baramnesia"] = { vendor = "Tya Padolih (Mhaura)", drop = "Furious Arundmite (Sih Gates) / Cowll Hippogryph (Woh Gates) / Dreadpincer (Dho Gates) / Vemosia (Cirdas Caverns) / Stinkskin (Moh Gates)", other = "Auction House" };
+acq["Baramnesra"] = { vendor = "Tya Padolih (Mhaura)", drop = "Furious Arundmite (Sih Gates) / Stinkskin (Moh Gates) / Cowll Hippogryph (Woh Gates) / Vemosia (Cirdas Caverns) / Dreadpincer (Dho Gates)", other = "Auction House" };
+acq["Barblind"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barblindra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barblizzara"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barblizzard"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barfira"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barfire"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barparalyze"] = { vendor = "Hasim (Lower Jeuno)" };
 acq["Barparalyzra"] = { vendor = "Hasim (Lower Jeuno)" };
-acq["Barblindra"]   = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barpetra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barpetrify"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barpoison"] = { vendor = "Hasim (Lower Jeuno)", drop = "Garnet Quadav (Rolanberry Fields) / Goblin Leecher (King Ranperre's Tomb) / Yagudo Priest (Giddeus)", other = "Auction House" };
+acq["Barpoisonra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barsilence"] = { vendor = "Hasim (Lower Jeuno)" };
 acq["Barsilencera"] = { vendor = "Hasim (Lower Jeuno)" };
-acq["Barpetra"]     = { vendor = "Hasim (Lower Jeuno)" };
-acq["Barvira"]      = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barsleep"] = { vendor = "Hasim (Lower Jeuno)", drop = "Goblin Leecher (King Ranperre's Tomb)", other = "Auction House" };
+acq["Barsleepra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barstone"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barstonra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barthunder"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barthundra"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barvira"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barvirus"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barwater"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Barwatera"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Blaze Spikes"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Know One's Onions" };
+acq["Blink"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Boost-AGI"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Ouryu (Monarch Linn) / Stinkskin (Moh Gates) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater)", other = "Auction House" };
+acq["Boost-CHR"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Mnejing (Jade Sepulcher) / Jasweem (Jade Sepulcher) / Gessho (Talacca Cove) / Vemosia (Cirdas Caverns) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Boost-DEX"] = { vendor = "Hasim (Lower Jeuno)", drop = "Veiled Gigaworm (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Lofty Elasmoth (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Boost-INT"] = { vendor = "Hasim (Lower Jeuno)", drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Mired Alfard (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Boost-MND"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Dreadpincer (Dho Gates) / Ark Angel MR (La'Loff Amphitheater) / Ouryu (Monarch Linn) / Furious Arundmite (Sih Gates) / Ark Angel HM (La'Loff Amphitheater)", other = "Auction House" };
+acq["Boost-STR"] = { vendor = "Hasim (Lower Jeuno)", drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Boost-VIT"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Gessho (Talacca Cove) / Vemosia (Cirdas Caverns) / Cowll Hippogryph (Woh Gates) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater)", other = "Auction House" };
+acq["Crusade"] = { vendor = "Brave Ox (Rabao)", quest = "Records of Eminence:<br />Achievements → Job Levels 4 → Level 75 Rune Fencer - First time completion reward." };
+acq["Deodorize"] = { vendor = "Tya Padolih (Mhaura) / Falgima (Selbina)", drop = "Hoo Mjuu the Torrent (Giddeus) / Garnet Quadav (Rolanberry Fields) / Yagudo Priest (Meriphataud Mountains) / Goblin Leecher (King Ranperre's Tomb)", other = "Auction House" };
+acq["Embrava"] = { other = "Auction House" };
+acq["Enaero"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enaero II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Magic Jug (Garlaige Citadel)", other = "Auction House" };
+acq["Enblizzard"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enblizzard II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Onyx Quadav (North Gustaberg (S))", other = "Auction House" };
+acq["Enfire"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enfire II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Droma (Fei'Yin)", other = "Auction House" };
+acq["Enstone"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enstone II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Magic Flagon (Ro'Maeve)", other = "Auction House" };
+acq["Enthunder"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enthunder II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Hover Tank (Temple of Uggalepih)", other = "Auction House" };
+acq["Enwater"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Quelpia (Selbina)" };
+acq["Enwater II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Emerald Quadav (Rolanberry Fields (S))", other = "Auction House" };
+acq["Erase"] = { other = "Auction House" };
+acq["Escape"] = { drop = "Banshee (Gusgen Mines)", other = "Auction House" };
+acq["Firestorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Firestorm II"] = { other = "Auction House" };
+acq["Flurry"] = { vendor = "Falgima (Selbina)" };
+acq["Flurry II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Leviathan Prime (Cloister of Tides) / Shiva Prime (Cloister of Frost) / Garuda Prime (Cloister of Gales) / Ifrit Prime (Cloister of Flames) / Shikaree Z (Boneyard Gully)", other = "Auction House" };
+acq["Foil"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Gain-AGI"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Ouryu (Monarch Linn) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel HM (La'Loff Amphitheater) / Vemosia (Cirdas Caverns) / Furious Arundmite (Sih Gates)", other = "Auction House" };
+acq["Gain-CHR"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Ark Angel HM (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater) / Dreadpincer (Dho Gates)", other = "Auction House" };
+acq["Gain-DEX"] = { vendor = "Hasim (Lower Jeuno)", drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Lofty Elasmoth (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Gain-INT"] = { vendor = "Hasim (Lower Jeuno)", drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Soaring Kumakatok (Maquette Abdhaljs-Legion) / Lofty Harpeia (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Gain-MND"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Dreadpincer (Dho Gates) / Vemosia (Cirdas Caverns) / Ouryu (Monarch Linn) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel HM (La'Loff Amphitheater)", other = "Auction House" };
+acq["Gain-STR"] = { vendor = "Hasim (Lower Jeuno)", drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Gain-VIT"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Gessho (Talacca Cove) / Stinkskin (Moh Gates) / Tenzen (Sealion's Den) / Vemosia (Cirdas Caverns) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Hailstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Hailstorm II"] = { other = "Auction House" };
+acq["Haste"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Haste II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Leviathan Prime (Cloister of Tides) / Ultima (Sealion's Den) / Shiva Prime (Cloister of Frost) / Garuda Prime (Cloister of Gales) / Shikaree Z (Boneyard Gully)", other = "Auction House" };
+acq["Ice Spikes"] = { quest = "Inside the Belly - Possibility of obtaining when turning in Apkallufa", drop = "Phantom (Ship Bound For Selbina)", other = "Auction House" };
+acq["Invisible"] = { vendor = "Tya Padolih (Mhaura) / Falgima (Selbina)", drop = "Ge'dha Evileye (Beadeaux) / Yagudo Priest (Meriphataud Mountains) / Garnet Quadav (Rolanberry Fields) / Goblin Leecher (Ranguemont Pass)", other = "Auction House" };
+acq["Phalanx"] = { drop = "Kutkha (Balga's Dais) / Zymotic Zuulie (Sacrificial Chamber) / Vu'dhe Impervious (Waughroon Shrine) / Grievous Gozar (Sacrificial Chamber) / Slimey Simeon (Sacrificial Chamber)", other = "Auction House" };
+acq["Phalanx II"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Protect"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Protect II"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Protect III"] = { vendor = "Hasim (Lower Jeuno) / Zafif (Al Zahbi)" };
+acq["Protect IV"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) / Zafif (Al Zahbi) / Brave Ox (Rabao)" };
+acq["Protect V"] = { vendor = "Brave Ox (Rabao)", drop = "Furious Arundmite (Sih Gates) / Dreadpincer (Dho Gates) / Cowll Hippogryph (Woh Gates) / Stinkskin (Moh Gates) / Vemosia (Cirdas Caverns)", other = "Auction House" };
+acq["Protectra"] = { drop = "Goblin Leecher (Maze of Shakhrami)", other = "Auction House" };
+acq["Protectra II"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)" };
+acq["Protectra III"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Protectra IV"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) / Zafif (Al Zahbi) / Brave Ox (Rabao)" };
+acq["Protectra V"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Rainstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Rainstorm II"] = { other = "Auction House" };
+acq["Recall-Jugner"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Evil at the Inlet - Rodeupansat, Crawlers' Nest (S) (J-7)" };
+acq["Recall-Meriph"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Requiem for the Departed - Heptachiond, The Eldieme Necropolis (S) (H-8)" };
+acq["Recall-Pashh"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "The Fumbling Friar - Fondactiont, Garlaige Citadel (S) (I-6)" };
+acq["Refresh"] = { drop = "Taisaijin (Ranguemont Pass)", other = "Auction House" };
+acq["Refresh II"] = { vendor = "Macchi Gazlitah (Ru'Lude Gardens)", drop = "Mnejing (Jade Sepulcher) / Jasweem (Jade Sepulcher) / Taisaijin (Ranguemont Pass) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Refresh III"] = { other = "Auction House" };
+acq["Regen"] = { vendor = "Tya Padolih (Mhaura)", drop = "Boggart (Inner Horutoto Ruins)", other = "Auction House" };
+acq["Regen II"] = { vendor = "Tya Padolih (Mhaura)", drop = "Ten Of Cups (Outer Horutoto Ruins) / Rivulet Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Regen III"] = { drop = "Foreseer Oramix (Ifrit's Cauldron) / Novv the Whitehearted (Sea Serpent Grotto) / Diamond Quadav (Qulun Dome) / Yagudo High Priest (Castle Oztroja) / Goblin Alchemist (Labyrinth of Onzozo)", other = "Auction House" };
+acq["Regen IV"] = { vendor = "Gekko (Port Jeuno)", drop = "Jasweem (Jade Sepulcher) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel HM (La'Loff Amphitheater) / Dreadpincer (Dho Gates) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Regen V"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Reprisal"] = { vendor = "Zafif (Al Zahbi)" };
+acq["Retrace"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "The Lost Book - Yoran-Oran - Windurst Waters (S) (J-9)" };
+acq["Sandstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Sandstorm II"] = { other = "Auction House" };
+acq["Shell"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Shell II"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Shell III"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Shell IV"] = { drop = "Ruby Quadav (Qulun Dome) / Magic Jug (Garlaige Citadel) / Dustbuster (Ve'Lugannon Palace) / Hover Tank (Temple of Uggalepih) / Sprinkler (Ru'Aun Gardens)", other = "Auction House" };
+acq["Shell V"] = { vendor = "Brave Ox (Rabao)", drop = "Furious Arundmite (Sih Gates) / Cowll Hippogryph (Woh Gates) / Vemosia (Cirdas Caverns) / Dreadpincer (Doh Gates)", other = "Auction House" };
+acq["Shellra"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)" };
+acq["Shellra II"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Shellra III"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Shellra IV"] = { drop = "Foreseer Oramix (Ifrit's Cauldron) / Novv the Whitehearted (Sea Serpent Grotto) / Diamond Quadav (Qulun Dome) / Yagudo High Priest (Castle Oztroja) / Goblin Alchemist (Pso'Xja)", other = "Auction House" };
+acq["Shellra V"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Shock Spikes"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Mamaroon (Nashmau) / Chutarmire (Selbina)" };
+acq["Sneak"] = { vendor = "Tya Padolih (Mhaura) / Falgima (Selbina)", drop = "Ge'Dha Evileye (Beadeaux) / Goblin Leecher (King Ranperre's Tomb)", other = "Auction House" };
+acq["Stoneskin"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Teleport-Altep"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "The Missing Piece - Alfesar, Rabao (H-7)" };
+acq["Teleport-Dem"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Altana's Sorrow - Virnage - Bastok Mines (I-5)" };
+acq["Teleport-Holla"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Healing the Land - Eperdur, Northern San d'Oria (M-7)" };
+acq["Teleport-Mea"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Acting in Good Faith - Gantineux, Windurst Waters (E-10)" };
+acq["Teleport-Vahzl"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Sorcery of the North - Eperdur, Northern San d'Oria (M-7)" };
+acq["Teleport-Yhoat"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Missionary Man - Rauteinot, Kazham (G-9)" };
+acq["Temper"] = { other = "Auction House" };
+acq["Temper II"] = { other = "Auction House" };
+acq["Thunderstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Thunderstorm II"] = { other = "Auction House" };
+acq["Voidstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Voidstorm II"] = { other = "Auction House" };
+acq["Warp"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Mean Machine - Unlucky Rat, Metalworks (G-7)" };
+acq["Warp II"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Curses, Foiled A-Golem!?" };
+acq["Windstorm"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Windstorm II"] = { other = "Auction House" };
 
 ----------------------------------------------------------------------------------------------------
--- Enhancing Magic (En-spells)
+-- Enfeebling Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Enfire"]       = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enblizzard"]   = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enaero"]       = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enstone"]      = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enthunder"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enwater"]      = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Enfire II"]    = { other = "Auction House" };
-acq["Enblizzard II"]= { other = "Auction House" };
-acq["Enaero II"]    = { other = "Auction House" };
-acq["Enstone II"]   = { other = "Auction House" };
-acq["Enthunder II"] = { other = "Auction House" };
-acq["Enwater II"]   = { other = "Auction House" };
+acq["Addle"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Ark Angel MR (La'Loff Amphitheater) / Ouryu (Monarch Linn) / Ark Angel HM (La'Loff Amphitheater) / Tenzen (Sealion's Den) / Ark Angel TT (La'Loff Amphitheater)", other = "Auction House" };
+acq["Addle II"] = { other = "Auction House" };
+acq["Bind"] = { drop = "Yagudo Scribe (Giddeus) / Orcish Mesmerizer (Fort Ghelsba) / Amber Quadav (Konschtat Highlands)", other = "Auction House" };
+acq["Blind"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Aroro (Port Windurst) [Conquest] / Zaira (Bastok Markets) [Conquest]", drop = "Yagudo Scribe (Giddeus) / Amber Quadav (South Gustaberg) / Orcish Mesmerizer (Ghelsba Outpost)", other = "Auction House" };
+acq["Blind II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Break"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Jasweem (Jade Sepulcher) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater)", other = "Auction House" };
+acq["Breakga"] = { drop = "Paramount Naraka (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Dia"] = { vendor = "Regine (Port San d'Oria) / Kususu (Port Windurst) / Sororo (Bastok Markets)" };
+acq["Dia II"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) [Conquest] / Quelpia (Selbina)" };
+acq["Dia III"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Diaga"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Dispel"] = { vendor = "Shohrun-Tuhrun (Windurst Waters South) / Zafif (Al Zahbi) / Brave Ox (Rabao)" };
+acq["Dispelga"] = { other = "Auction House" };
+acq["Distract"] = { vendor = "Tya Padolih (Mhaura)" };
+acq["Distract II"] = { vendor = "Nilerouche (Tavnazian Safehold) / Mazuro-Oozuro (Tavnazian Safehold)", drop = "Garuda Prime (Cloister of Gales) / Shiva Prime (Cloister of Frost) / Leviathan Prime (Cloister of Tides) / Ultima (Sealion's Den) / Titan Prime (Cloister of Tremors)", other = "Auction House" };
+acq["Distract III"] = { other = "Auction House" };
+acq["Frazzle"] = { vendor = "Tya Padolih (Mhaura)" };
+acq["Frazzle II"] = { vendor = "Nilerouche (Tavnazian Safehold) / Mazuro-Oozuro (Tavnazian Safehold)", drop = "Shiva Prime (Cloister of Frost) / Leviathan Prime (Cloister of Tides) / Shikaree Z (Boneyard Gully) / Shikaree Y (Boneyard Gully) / Garuda Prime (Cloister of Gales)", other = "Auction House" };
+acq["Frazzle III"] = { other = "Auction House" };
+acq["Godfry sandbox"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Gravity"] = { drop = "Wendigo (Maze of Shakhrami) / Wight (Carpenters' Landing) / Ghoul (Outer Horutoto Ruins)", other = "Auction House" };
+acq["Gravity II"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion) / Soaring Dweorg (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Inundation"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)" };
+acq["Paralyze"] = { drop = "Goblin Leecher (King Ranperre's Tomb)", other = "Auction House" };
+acq["Paralyze II"] = { vendor = "Hasim (Lower Jeuno)" };
+acq["Poison"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Aroro (Port Windurst) [Conquest] / Zaira (Bastok Markets) [Conquest]" };
+acq["Poison II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Mazween (Aht Urhgan Whitegate) / Chutarmire (Selbina)" };
+acq["Poisonga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Mazween (Aht Urhgan Whitegate) / Chutarmire (Selbina)" };
+acq["Poisonga II"] = { other = "Auction House" };
+acq["Silence"] = { drop = "Garnet Quadav (Rolanberry Fields) / Goblin Leecher (Maze of Shakhrami) / Yagudo Priest (Giddeus)", other = "Auction House" };
+acq["Sleep"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Aroro (Port Windurst) [Conquest] / Zaira (Bastok Markets) [Conquest]" };
+acq["Sleep II"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)" };
+acq["Sleepga"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate) / Tya Padolih (Mhaura)" };
+acq["Sleepga II"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Searching for the Right Words" };
+acq["Slow"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
+acq["Slow II"] = { vendor = "Hasim (Lower Jeuno)" };
 
 ----------------------------------------------------------------------------------------------------
--- Teleport / Recall / Warp
+-- Elemental Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Warp"]          = { vendor = "Chutarmire (Upper Jeuno)", other = "Auction House" };
-acq["Warp II"]       = { other = "Auction House", quest = "Wonder Wands (Windurst)" };
-acq["Escape"]        = { other = "Auction House" };
-acq["Retrace"]       = { other = "Auction House" };
-acq["Teleport-Dem"]  = { quest = "Teleport quest chain (Windurst)" };
-acq["Teleport-Holla"]= { quest = "Teleport quest chain (San d'Oria)" };
-acq["Teleport-Mea"]  = { quest = "Teleport quest chain (Bastok)" };
-acq["Teleport-Yhoat"]= { quest = "Teleport quest (Kazham)" };
-acq["Teleport-Altep"]= { quest = "Teleport quest (Rabao)" };
-acq["Teleport-Vahzl"]= { quest = "Teleport quest (Beaucedine)" };
-acq["Recall-Jugner"] = { other = "Auction House" };
-acq["Recall-Pashh"]  = { other = "Auction House" };
-acq["Recall-Meriph"] = { other = "Auction House" };
-
-----------------------------------------------------------------------------------------------------
--- Enfeebling Magic (White)
-----------------------------------------------------------------------------------------------------
-
-acq["Dia"]         = { vendor = "Cesse (S. San d'Oria) / Hasim (Lower Jeuno) / Zafif (Windurst Waters)" };
-acq["Dia II"]      = { vendor = "Regine (Port San d'Oria) / Quelpia (Lower Jeuno)" };
-acq["Dia III"]     = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Diaga"]       = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Slow"]        = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Slow II"]     = { other = "Auction House" };
-acq["Paralyze"]    = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Paralyze II"] = { other = "Auction House" };
-acq["Silence"]     = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
-acq["Repose"]      = { other = "Auction House (rare)" };
-acq["Addle"]       = { other = "Auction House" };
-
-----------------------------------------------------------------------------------------------------
--- Elemental Magic (Tiers)
-----------------------------------------------------------------------------------------------------
-
--- Fire
-acq["Fire"]         = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Fire II"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Fire III"]     = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Fire IV"]      = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Fire V"]       = { other = "Auction House (rare)" };
-acq["Firaga"]       = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Firaga II"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Firaga III"]   = { other = "Auction House", drop = "Various high-level mobs" };
--- Blizzard
-acq["Blizzard"]     = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Blizzard II"]  = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Blizzard III"] = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Blizzard IV"]  = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Blizzard V"]   = { other = "Auction House (rare)" };
-acq["Blizzaga"]     = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Blizzaga II"]  = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Blizzaga III"] = { other = "Auction House", drop = "Various high-level mobs" };
--- Aero
-acq["Aero"]         = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Aero II"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Aero III"]     = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Aero IV"]      = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Aero V"]       = { other = "Auction House (rare)" };
-acq["Aeroga"]       = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Aeroga II"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Aeroga III"]   = { other = "Auction House", drop = "Various high-level mobs" };
--- Stone
-acq["Stone"]        = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Stone II"]     = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Stone III"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Stone IV"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Stone V"]      = { other = "Auction House (rare)" };
-acq["Stonega"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Stonega II"]   = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Stonega III"]  = { other = "Auction House", drop = "Various high-level mobs" };
--- Thunder
-acq["Thunder"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Thunder II"]   = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Thunder III"]  = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Thunder IV"]   = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Thunder V"]    = { other = "Auction House (rare)" };
-acq["Thundaga"]     = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Thundaga II"]  = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Thundaga III"] = { other = "Auction House", drop = "Various high-level mobs" };
--- Water
-acq["Water"]        = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Water II"]     = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Water III"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Water IV"]     = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Water V"]      = { other = "Auction House (rare)" };
-acq["Waterga"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Waterga II"]   = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Waterga III"]  = { other = "Auction House", drop = "Various high-level mobs" };
-
-----------------------------------------------------------------------------------------------------
--- Elemental Magic (Ancient / Special)
-----------------------------------------------------------------------------------------------------
-
-acq["Flare"]    = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Freeze"]   = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Tornado"]  = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Quake"]    = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Burst"]    = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Flood"]    = { other = "Auction House (rare)", drop = "Various HNMs" };
-acq["Flare II"] = { other = "Auction House (very rare)" };
-acq["Freeze II"]= { other = "Auction House (very rare)" };
-acq["Tornado II"]={ other = "Auction House (very rare)" };
-acq["Quake II"] = { other = "Auction House (very rare)" };
-acq["Burst II"] = { other = "Auction House (very rare)" };
-acq["Flood II"] = { other = "Auction House (very rare)" };
-acq["Comet"]    = { other = "Auction House (rare)" };
-acq["Meteor"]   = { other = "Auction House (very rare)" };
-
-----------------------------------------------------------------------------------------------------
--- Enfeebling Magic (Black)
-----------------------------------------------------------------------------------------------------
-
-acq["Poison"]      = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Poison II"]   = { other = "Auction House" };
-acq["Poisonga"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Bio"]         = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Bio II"]      = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Bio III"]     = { other = "Auction House (rare)" };
-acq["Blind"]       = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Blind II"]    = { other = "Auction House" };
-acq["Bind"]        = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Gravity"]     = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Sleep"]       = { vendor = "Armentho (N. San d'Oria) / Akeem (Bastok Mines) / Kisana (Windurst Waters)" };
-acq["Sleep II"]    = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Sleepga"]     = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Sleepga II"]  = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Dispel"]      = { other = "Auction House", drop = "Various high-level mobs" };
-acq["Break"]       = { other = "Auction House" };
-acq["Breakga"]     = { other = "Auction House" };
-acq["Drain"]       = { vendor = "Promurouve (Lower Jeuno)", other = "Auction House" };
-acq["Drain II"]    = { other = "Auction House" };
-acq["Aspir"]       = { other = "Auction House" };
-acq["Aspir II"]    = { other = "Auction House" };
-acq["Tractor"]     = { vendor = "Quelpia (Lower Jeuno)", other = "Auction House" };
+acq["Aera"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Aera II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Jasweem (Jade Sepulcher) / Puffy Marshmaw (Sacrificial Chamber) / Zi'pha Foecrippler (Waughroon Shrine) / Ga'khu Bloodglee (Waughroon Shrine) / Ouryu (Monarch Linn)", other = "Auction House" };
+acq["Aera III"] = { other = "Auction House" };
+acq["Aero"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Aero II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Aero III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Yagudo Prelate (Castle Oztroja) / Yagudo Prior (Garlaige Citadel (S))", other = "Auction House" };
+acq["Aero IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Yagudo Prelate (Castle Oztroja) / Yagudo Prior (Sauromugue Champaign (S)) / Yagudo Hierogrammat (Castle Oztroja (S))", other = "Auction House" };
+acq["Aero V"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Jasweem (Jade Sepulcher) / Ouryu (Monarch Linn) / Stinkskin (Moh Gates) / Cowll Hippogryph (Woh Gates) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Aero VI"] = { other = "Auction House" };
+acq["Aeroga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Aeroga II"] = { vendor = "Susu (Lower Jeuno)", drop = "Yagudo Prelate (Castle Zvahl Baileys (S)) / Yagudo Hierogrammat (Castle Oztroja (S))", other = "Auction House" };
+acq["Aeroga III"] = { vendor = "Susu (Lower Jeuno)", drop = "Baron Vapula (Castle Zvahl Keep) / Yagudo Prelate (Castle Oztroja) / Yagudo Hierogrammat (Castle Zvahl Keep (S))", other = "Auction House" };
+acq["Aeroga IV"] = { other = "Auction House" };
+acq["Aeroja"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Jasweem (Jade Sepulcher) / Vemosia (Cirdas Caverns) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater) / Dreadpincer (Dho Gates)", other = "Auction House" };
+acq["Anemohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Anemohelix II"] = { other = "Auction House" };
+acq["Blizzaga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Blizzaga II"] = { vendor = "Susu (Lower Jeuno)", drop = "Phasma (Uleguerand Range) / Taxim (Gustav Tunnel) / Srei Ap (Uleguerand Range) / Haunt (The Eldieme Necropolis) / Spartoi Sorcerer (King Ranperre's Tomb)", other = "Auction House" };
+acq["Blizzaga III"] = { vendor = "Susu (Lower Jeuno)", drop = "Taxim (Gustav Tunnel) / Spartoi Sorcerer (King Ranperre's Tomb) / Doom Warlock (Gustav Tunnel)", other = "Auction House" };
+acq["Blizzaga IV"] = { other = "Auction House" };
+acq["Blizzaja"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Lofty Ferromantoise (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Blizzara"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Blizzara II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Gessho (Talacca Cove) / Kutkha (Balga's Dais) / Stinkskin (Moh Gates) / Jasweem (Jade Sepulcher) / Slimey Simeon (Sacrificial Chamber)", other = "Auction House" };
+acq["Blizzara III"] = { other = "Auction House" };
+acq["Blizzard"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Blizzard II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Blizzard III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Taxim (Gustav Tunnel) / Tomb Mage (Attohwa Chasm) / Doom Mage (Cape Teriggan) / Mindcraver (Toraimarai Canal)", other = "Auction House" };
+acq["Blizzard IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Taxim (Gustav Tunnel) / Spartoi Sorcerer (King Ranperre's Tomb) / Doom Warlock (Gustav Tunnel) / Bhoot (Gustav Tunnel)", other = "Auction House" };
+acq["Blizzard V"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Ark Angel MR (La'Loff Amphitheater) / Ouryu (Monarch Linn) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater) / Veiled Ixion (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Blizzard VI"] = { other = "Auction House" };
+acq["Burn"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Burst"] = { vendor = "Susu (Lower Jeuno)", drop = "Zymotic Zuulie (Sacrificial Chamber) / Kutkha (Balga's Dais) / Pha Groxo the Aloof (Balga's Dais) / Ro'Mho Unrelenting (Waughroon Shrine) / Xee Khoyi the Shrouded (Balga's Dais)", other = "Auction House" };
+acq["Burst II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Choke"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Comet"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Soaring Strigoi (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Cryohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Cryohelix II"] = { other = "Auction House" };
+acq["Drown"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Fira"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Fira II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Gessho (Talacca Cove) / Ro'mho Unrelenting (Waughroon Shrine) / Ouryu (Monarch Linn) / Stinkskin (Moh Gates) / Ark Angel GK (La'Loff Amphitheater)", other = "Auction House" };
+acq["Fira III"] = { other = "Auction House" };
+acq["Firaga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Firaga II"] = { vendor = "Susu (Lower Jeuno)", drop = "Dread Demon (Castle Zvahl Baileys) / Kindred Black Mage (Uleguerand Range)", other = "Auction House" };
+acq["Firaga III"] = { vendor = "Susu (Lower Jeuno)", drop = "Marquis Amon (Castle Zvahl Baileys) / Hakutaku (Den of Rancor) / Dread Demon (Castle Zvahl Baileys) / Million Eyes (Den of Rancor) / Soulsearer Demon (Castle Zvahl Baileys (S))", other = "Auction House" };
+acq["Firaga IV"] = { other = "Auction House" };
+acq["Firaja"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Jasweem (Jade Sepulcher) / Ark Angel EV (La'Loff Amphitheater) / Ouryu (Monarch Linn) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Fire (Spell)"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Fire II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Fire III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Hakutaku (Den of Rancor) / Marquis Amon (Castle Zvahl Baileys) / Dodomeki (Ifrit's Cauldron) / Mindgazer (Sea Serpent Grotto) / Dread Demon (Castle Zvahl Baileys)", other = "Auction House" };
+acq["Fire IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Marquis Amon (Castle Zvahl Baileys) / Hakutaku (Den of Rancor) / Dread Demon (Castle Zvahl Baileys) / Million Eyes (Den of Rancor) / Inferno Demon (Xarcabard (S))", other = "Auction House" };
+acq["Fire V"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Jasweem (Jade Sepulcher) / Ark Angel TT (La'Loff Amphitheater) / Lofty Behemoth (Maquette Abdhaljs-Legion) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater)", other = "Auction House" };
+acq["Fire VI"] = { other = "Auction House" };
+acq["Flare"] = { vendor = "Susu (Lower Jeuno)", drop = "Zi'Pha Foecrippler (Waughroon Shrine) / Slimey Simeon (Sacrificial Chamber) / Zuu Feya the Impassive (Balga's Dais) / Grievous Gozar (Sacrificial Chamber) / Puffy Marshmaw (Sacrificial Chamber)", other = "Auction House" };
+acq["Flare II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Flood"] = { vendor = "Susu (Lower Jeuno)", drop = "Grievous Gozar (Sacrificial Chamber) / Ro'Mho Unrelenting (Waughroon Shrine) / Xee Khoyi the Shrouded (Balga's Dais) / Malodorous Mort (Horlais Peak) / Puffy Marshmaw (Sacrificial Chamber)", other = "Auction House" };
+acq["Flood II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Freeze"] = { vendor = "Susu (Lower Jeuno)", drop = "Zi'Pha Foecrippler (Waughroon Shrine) / Kaa Xehi the Doomsayer (Balga's Dais) / Ga'Khu Bloodglee (Waughroon Shrine) / Vu'Dhe Impervious (Waughroon Shrine) / Zuu Feya the Impassive (Balga's Dais)", other = "Auction House" };
+acq["Freeze II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Frost"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Geohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Geohelix II"] = { other = "Auction House" };
+acq["Hydrohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Hydrohelix II"] = { other = "Auction House" };
+acq["Impact"] = { other = "Auction House" };
+acq["Ionohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Ionohelix II"] = { other = "Auction House" };
+acq["Luminohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Luminohelix II"] = { other = "Auction House" };
+acq["Meteor"] = { vendor = "Emporox (Reisenjima)", quest = "Mog Bonanza Homecoming - Rank 2 Prize", drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Provenance Watcher (Provenance) / Grievous Gozar (Sacrificial Chamber) / Kutkha (Balga's Dais)", other = "Auction House" };
+acq["Noctohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Noctohelix II"] = { other = "Auction House" };
+acq["Pyrohelix"] = { vendor = "Layton (The Eldieme Necropolis (S))" };
+acq["Pyrohelix II"] = { other = "Auction House" };
+acq["Quake"] = { vendor = "Susu (Lower Jeuno)", drop = "Ga'Khu Bloodglee (Waughroon Shrine) / Puffy Marshmaw (Sacrificial Chamber) / Kaa Xehi the Doomsayer (Balga's Dais) / Ro'Mho Unrelenting (Waughroon Shrine) / Slimey Simeon (Sacrificial Chamber)", other = "Auction House" };
+acq["Quake II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Rasp"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Shock"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Stone"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Stone II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Stone III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Centurio X-I (Quicksand Caves) / Orcish Hexspinner (Monastic Cavern) / Orcish Warlord (Monastic Cavern) / Goblin Chapman (North Gustaberg (S)) / Moblin Draftsman (Newton Movalpolos)", other = "Auction House" };
+acq["Stone IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Antican Proconsul (Quicksand Caves) / Centurio X-I (Quicksand Caves) / Orcish Hexspinner (Monastic Cavern) / Antican Quaestor (Quicksand Caves) / Antican Praetor (Quicksand Caves)", other = "Auction House" };
+acq["Stone V"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Dreadpincer (Dho Gates) / Stinkskin (Moh Gates) / Furious Arundmite (Sih Gates) / Vemosia (Cirdas Caverns) / Cowll Hippogryph (Woh Gates)", other = "Auction House" };
+acq["Stone VI"] = { other = "Auction House" };
+acq["Stonega"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Stonega II"] = { vendor = "Susu (Lower Jeuno)", drop = "Centurio X-I (Quicksand Caves) / Orcish Hexspinner (Monastic Cavern) / Antican Quaestor (Quicksand Caves) / Orcish Warlord (Monastic Cavern) / Goblin Chapman (North Gustaberg (S))", other = "Auction House" };
+acq["Stonega III"] = { vendor = "Susu (Lower Jeuno)", drop = "Antican Proconsul (Quicksand Caves) / Centurio X-I (Quicksand Caves) / Orcish Hexspinner (Monastic Cavern) / Orcish Warlord (Monastic Cavern) / Antican Praetor (Quicksand Caves)", other = "Auction House" };
+acq["Stonega IV"] = { other = "Auction House" };
+acq["Stoneja"] = { vendor = "Ezura-Romazura (Windurst Waters (S))", drop = "Gessho (Talacca Cove) / Jasweem (Jade Sepulcher) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel TT (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater)", other = "Auction House" };
+acq["Stonera"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Stonera II"] = { vendor = "Ledericus (Western Adoulin)", drop = "Stinkskin (Moh Gates) / Ouryu (Monarch Linn) / Ark Angel TT (La'Loff Amphitheater) / Vu'Dhe Impervious (Waughroon Shrine) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Stonera III"] = { other = "Auction House" };
+acq["Thundaga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Thundaga II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Thundaga III"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Thundaga IV"] = { other = "Auction House" };
+acq["Thundaja"] = { other = "Auction House" };
+acq["Thundara"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Thundara II"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Thundara III"] = { other = "Auction House" };
+acq["Thunder"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Thunder II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Thunder III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Mysticmaker Profblix (Labyrinth of Onzozo) / Tonberry Maledictor (Temple of Uggalepih) / Tonberry Imprecator (Den of Rancor) / Hover Tank (Temple of Uggalepih) / Sprinkler (Ru'Aun Gardens)", other = "Auction House" };
+acq["Thunder IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Mysticmaker Profblix (Labyrinth of Onzozo) / Hover Tank (Temple of Uggalepih) / Magic Pot (Upper Delkfutt's Tower) / Magic Flagon (Ro'Maeve) / Sprinkler (Ru'Aun Gardens)", other = "Auction House" };
+acq["Thunder V"] = { other = "Auction House" };
+acq["Thunder VI"] = { other = "Auction House" };
+acq["Tornado"] = { vendor = "Susu (Lower Jeuno)", drop = "Yagudo Prelate (Castle Oztroja) / Yagudo Prior (Garlaige Citadel (S)) / Yagudo Hierogrammat (Castle Oztroja (S))", other = "Auction House" };
+acq["Tornado II"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Water (Spell)"] = { vendor = "Regine (Port San d'Oria) / Aroro (Port Windurst) / Zaira (Bastok Markets)" };
+acq["Water II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) / Chutarmire (Selbina)" };
+acq["Water III"] = { vendor = "Susu (Lower Jeuno) / Mazween (Aht Urhgan Whitegate)", drop = "Sapphire Quadav (Beadeaux) / Tonberry Pontifex (Den of Rancor) / Bistre-hearted Malberry (Den of Rancor)", other = "Auction House" };
+acq["Water IV"] = { vendor = "Susu (Lower Jeuno)", drop = "Sapphire Quadav (Beadeaux) / Sozu Bliberry (Den of Rancor) / Tonberry Pontifex (Den of Rancor) / Bistre-hearted Malberry (Den of Rancor)", other = "Auction House" };
+acq["Water V"] = { vendor = "Ezura-Romazura (Windurst Waters (S))" };
+acq["Water VI"] = { other = "Auction House" };
+acq["Watera"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Watera II"] = { vendor = "Ledericus (Western Adoulin)" };
+acq["Watera III"] = { other = "Auction House" };
+acq["Waterga"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Chutarmire (Selbina)" };
+acq["Waterga II"] = { vendor = "Susu (Lower Jeuno)", drop = "Sapphire Quadav (Beadeaux) / Tonberry Pontifex (Den of Rancor) / Bistre-hearted Malberry (Den of Rancor)", other = "Auction House" };
+acq["Waterga III"] = { vendor = "Susu (Lower Jeuno)", drop = "Sapphire Quadav (Beadeaux) / Sozu Bliberry (Den of Rancor) / Bistre-hearted Malberry (Den of Rancor)", other = "Auction House" };
+acq["Waterga IV"] = { other = "Auction House" };
+acq["Waterja"] = { vendor = "Ezura-Romazura (Windurst Waters (S))" };
 
 ----------------------------------------------------------------------------------------------------
 -- Dark Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Stun"]     = { other = "Auction House", drop = "Various high-level mobs" };
+acq["Absorb-ACC"] = { vendor = "Mazween (Aht Urhgan Whitegate)", drop = "Orcish Neckchopper (East Ronfaure (S))", other = "Auction House" };
+acq["Absorb-AGI"] = { drop = "Orcish Zerker (Monastic Cavern) / Goblin Reaper (Castle Zvahl Keep)", other = "Auction House" };
+acq["Absorb-Attri"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Absorb-CHR"] = { vendor = "Jabbar (Port Bastok) / Chiyo (Norg)" };
+acq["Absorb-DEX"] = { drop = "Duke Haborym (Castle Zvahl Baileys) / Count Bifrons (Castle Zvahl Keep) / Judicator Demon (Uleguerand Range) / Eclipse Demon (Xarcabard (S))", other = "Auction House" };
+acq["Absorb-INT"] = { drop = "Orcish Zerker (Monastic Cavern) / Goblin Reaper (Castle Zvahl Baileys) / Tigerbane Bakdak (Davoi)", other = "Auction House" };
+acq["Absorb-MND"] = { vendor = "Jabbar (Port Bastok) / Chiyo (Norg)" };
 acq["Absorb-STR"] = { other = "Auction House" };
-acq["Absorb-DEX"] = { other = "Auction House" };
-acq["Absorb-VIT"] = { other = "Auction House" };
-acq["Absorb-AGI"] = { other = "Auction House" };
-acq["Absorb-INT"] = { other = "Auction House" };
-acq["Absorb-MND"] = { other = "Auction House" };
-acq["Absorb-CHR"] = { other = "Auction House" };
-acq["Absorb-ACC"] = { other = "Auction House" };
-acq["Absorb-TP"]  = { other = "Auction House" };
-acq["Dread Spikes"]= { other = "Auction House (rare)" };
+acq["Absorb-TP"] = { vendor = "Mazween (Aht Urhgan Whitegate)" };
+acq["Absorb-VIT"] = { drop = "Orcish Zerker (Castle Zvahl Keep) / Fallen Knight (Western Altepa Desert) / Rot Prowler (The Sanctuary of Zi'Tah)", other = "Auction House" };
+acq["Aspir"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Making the Grade - Fuepepe, Windurst Waters (L-6)" };
+acq["Aspir II"] = { vendor = "Mazween (Aht Urhgan Whitegate)", drop = "Stinkskin (Moh Gates) / Furious Arundmite (Sih Gates) / Cowll Hippogryph (Woh Gates) / Vemosia (Cirdas Caverns)", other = "Auction House" };
+acq["Aspir III"] = { other = "Auction House" };
+acq["Bio"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Aroro (Port Windurst) [Conquest] / Zaira (Bastok Markets) [Conquest]" };
+acq["Bio II"] = { vendor = "Hilkomu-Makimu (Windurst Waters South) [Conquest] / Mazween (Aht Urhgan Whitegate) / Chutarmire (Selbina)" };
+acq["Bio III"] = { vendor = "Susu (Lower Jeuno)" };
+acq["Death"] = { other = "Auction House" };
+acq["Drain"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "The Rumor" };
+acq["Drain II"] = { vendor = "Mazween (Aht Urhgan Whitegate)" };
+acq["Drain III"] = { other = "Auction House" };
+acq["Dread Spikes"] = { vendor = "Mazween (Aht Urhgan Whitegate)" };
+acq["Endark"] = { vendor = "Mamaroon (Nashmau)", drop = "Stinkskin (Moh Gates) / Dreadpincer (Dho Gates) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Endark II"] = { other = "Auction House" };
+acq["Kaustra"] = { other = "Auction House" };
+acq["Klimaform"] = { vendor = "Erlene (The Eldieme Necropolis (S))" };
+acq["Stun"] = { vendor = "Mamaroon (Nashmau) / Brave Ox (Rabao)", drop = "Goblin Reaper (The Sanctuary of Zi'Tah,Yuhtunga Jungle,Eastern Altepa Desert,Labyrinth of Onzozo,Gustav Tunnel,Castle Zvahl Baileys,Castle Zvahl Keep) / Lost Soul (Behemoth's Dominion) / Shade (Eldieme Necropolis) / Demon Wizard (Castle Zvahl Baileys) / Mummy (Eldieme Necropolis)", other = "Auction House" };
+acq["Tractor"] = { drop = "Wight (Sauromugue Champaign, Batallia Downs, Qufim Island, Gusgen Mines, Maze of Shakhrami)", other = "Auction House" };
 
 ----------------------------------------------------------------------------------------------------
 -- Ninjutsu
 ----------------------------------------------------------------------------------------------------
 
-acq["Utsusemi: Ichi"]  = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Utsusemi: Ni"]    = { other = "Auction House", drop = "Tonberry mobs (Temple of Uggalepih)" };
-acq["Tonko: Ichi"]     = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Tonko: Ni"]       = { other = "Auction House" };
-acq["Monomi: Ichi"]    = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Jubaku: Ichi"]    = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Hojo: Ichi"]      = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Hojo: Ni"]        = { other = "Auction House" };
-acq["Kurayami: Ichi"]  = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Kurayami: Ni"]    = { other = "Auction House" };
-acq["Dokumori: Ichi"]  = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Katon: Ichi"]     = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Katon: Ni"]       = { other = "Auction House" };
-acq["Hyoton: Ichi"]    = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Hyoton: Ni"]      = { other = "Auction House" };
-acq["Huton: Ichi"]     = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Huton: Ni"]       = { other = "Auction House" };
-acq["Doton: Ichi"]     = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Doton: Ni"]       = { other = "Auction House" };
-acq["Raiton: Ichi"]    = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Raiton: Ni"]      = { other = "Auction House" };
-acq["Suiton: Ichi"]    = { vendor = "Achille/Vuliaie (Norg)", other = "Auction House" };
-acq["Suiton: Ni"]      = { other = "Auction House" };
-acq["Migawari: Ichi"]  = { other = "Auction House" };
-acq["Myoshu: Ichi"]    = { other = "Auction House" };
-acq["Kakka: Ichi"]     = { other = "Auction House" };
+acq["Aisha: Ichi"] = { vendor = "Solby-Maholby (Norg)", drop = "Stinkskin (Moh Gates) / Cowll Hippogryph (Woh Gates) / Furious Arundmite (Sih Gates) / Dreadpincer (Dho Gates) / Vemosia (Cirdas Caverns)", other = "Auction House" };
+acq["Dokumori: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Like Shining Leggings" };
+acq["Doton: Ichi"] = { vendor = "Jabbar (Port Bastok) / Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Doton: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Keep)", other = "Auction House" };
+acq["Doton: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Gekka: Ichi"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Hojo: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Stop Your Whining" };
+acq["Hojo: Ni"] = { drop = "Tonberry Decapitator (Den of Rancor) / Sozu Sarberry (Temple of Uggalepih) / Yagudo Assassin (Castle Oztroja) / Tonberry Cutter (Temple of Uggalepih) / Tonberry Chopper (Yhoator Jungle)", other = "Auction House" };
+acq["Huton: Ichi"] = { vendor = "Jabbar (Port Bastok) / Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Huton: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Baileys)", other = "Auction House" };
+acq["Huton: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Hyoton: Ichi"] = { vendor = "Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Hyoton: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Keep)", other = "Auction House" };
+acq["Hyoton: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Jubaku: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Secret of the Damp Scroll" };
+acq["Kakka: Ichi"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Katon: Ichi"] = { vendor = "Jabbar (Port Bastok) / Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Katon: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Keep)", other = "Auction House" };
+acq["Katon: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Kurayami: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Like a Shining Subligar" };
+acq["Kurayami: Ni"] = { drop = "Tonberry Decapitator (Den of Rancor) / Sozu Sarberry (Temple of Uggalepih) / Yagudo Assassin (Castle Oztroja) / Cryptonberry Cutter (Pso'Xja) / Tonberry Cutter (Temple of Uggalepih)", other = "Auction House" };
+acq["Migawari: Ichi"] = { vendor = "Solby-Maholby (Norg)", drop = "Ouryu (Monarch Linn) / Stinkskin (Moh Gates) / Dreadpincer (Dho Gates) / Ark Angel HM (La'Loff Amphitheater) / Furious Arundmite (Sih Gates)", other = "Auction House" };
+acq["Monomi: Ichi"] = { vendor = "Amalasanda (Lower Jeuno) / Toji Mumosulah (Kazham)" };
+acq["Myoshu: Ichi"] = { vendor = "Solby-Maholby (Norg)", drop = "Jasweem (Jade Sepulcher) / Dreadpincer (Dho Gates) / Ouryu (Monarch Linn) / Furious Arundmite (Sih Gates) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Raiton: Ichi"] = { vendor = "Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Raiton: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Keep)", other = "Auction House" };
+acq["Raiton: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Suiton: Ichi"] = { vendor = "Jabbar (Port Bastok) / Amalasanda (Lower Jeuno) / Chiyo (Norg)" };
+acq["Suiton: Ni"] = { drop = "Yagudo Conquistador (Castle Zvahl Keep)", other = "Auction House" };
+acq["Suiton: San"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Tonko: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "It's Not Your Vault" };
+acq["Tonko: Ni"] = { drop = "Yagudo Assassin (Castle Oztroja) / Cryptonberry Cutter (Pso'Xja) / Tonberry Decapitator (Den of Rancor) / Tonberry Cutter (Temple of Uggalepih) / Tonberry Slasher (Temple of Uggalepih)", other = "Auction House" };
+acq["Utsusemi: Ichi"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "The Sahagin's Stash" };
+acq["Utsusemi: Ni"] = { other = "Auction House" };
+acq["Utsusemi: San"] = { other = "Auction House" };
+acq["Yain: Ichi"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Yurin: Ichi"] = { vendor = "Solby-Maholby (Norg)" };
 
 ----------------------------------------------------------------------------------------------------
 -- Songs (Bard)
 ----------------------------------------------------------------------------------------------------
 
-acq["Foe Requiem"]       = { vendor = "Baren-Mansen (Windurst Waters)", quest = "Mertaire (Lower Jeuno)" };
-acq["Foe Requiem II"]    = { vendor = "Baren-Mansen (Windurst Waters)", quest = "Mertaire (Lower Jeuno)" };
-acq["Foe Requiem III"]   = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Foe Requiem IV"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Foe Requiem V"]     = { other = "Auction House" };
-acq["Foe Requiem VI"]    = { other = "Auction House" };
-acq["Foe Requiem VII"]   = { other = "Auction House (rare)" };
-acq["Army's Paeon"]      = { vendor = "Baren-Mansen (Windurst Waters)", quest = "Mertaire (Lower Jeuno)" };
-acq["Army's Paeon II"]   = { vendor = "Baren-Mansen (Windurst Waters)", quest = "Mertaire (Lower Jeuno)" };
-acq["Army's Paeon III"]  = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Army's Paeon IV"]   = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Army's Paeon V"]    = { other = "Auction House" };
-acq["Army's Paeon VI"]   = { other = "Auction House (rare)" };
-acq["Mage's Ballad"]     = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Mage's Ballad II"]  = { other = "Auction House" };
-acq["Mage's Ballad III"] = { other = "Auction House (rare)" };
-acq["Knight's Minne"]    = { vendor = "Baren-Mansen (Windurst Waters)", quest = "Mertaire (Lower Jeuno)" };
-acq["Knight's Minne II"] = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Knight's Minne III"]= { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Knight's Minne IV"] = { other = "Auction House" };
-acq["Knight's Minne V"]  = { other = "Auction House (rare)" };
-acq["Valor Minuet"]      = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Valor Minuet II"]   = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Valor Minuet III"]  = { other = "Auction House" };
-acq["Valor Minuet IV"]   = { other = "Auction House" };
-acq["Valor Minuet V"]    = { other = "Auction House (rare)" };
-acq["Sword Madrigal"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Blade Madrigal"]    = { other = "Auction House" };
-acq["Hunter's Prelude"]  = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Archer's Prelude"]  = { other = "Auction House" };
-acq["Advancing March"]   = { other = "Auction House" };
-acq["Victory March"]     = { other = "Auction House (rare)" };
-acq["Honor March"]       = { other = "Auction House (very rare)" };
-acq["Battlefield Elegy"] = { other = "Auction House" };
-acq["Carnage Elegy"]     = { other = "Auction House" };
-acq["Foe Lullaby"]       = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Foe Lullaby II"]    = { other = "Auction House" };
-acq["Horde Lullaby"]     = { other = "Auction House" };
-acq["Horde Lullaby II"]  = { other = "Auction House (rare)" };
-acq["Magic Finale"]      = { other = "Auction House" };
-acq["Chocobo Mazurka"]   = { quest = "Chocobo's Wounds (Upper Jeuno)" };
-acq["Raptor Mazurka"]    = { other = "Auction House" };
-acq["Sheepfoe Mambo"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Dragonfoe Mambo"]   = { other = "Auction House" };
-
--- Etudes
-acq["Sinewy Etude"]      = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Herculean Etude"]   = { other = "Auction House" };
-acq["Dextrous Etude"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Uncanny Etude"]     = { other = "Auction House" };
-acq["Vivacious Etude"]   = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Vital Etude"]       = { other = "Auction House" };
-acq["Quick Etude"]       = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Swift Etude"]       = { other = "Auction House" };
-acq["Learned Etude"]     = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Sage Etude"]        = { other = "Auction House" };
-acq["Spirited Etude"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Logical Etude"]     = { other = "Auction House" };
-acq["Enchanting Etude"]  = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Bewitching Etude"]  = { other = "Auction House" };
-
--- Carols
-acq["Fire Carol"]        = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Fire Carol II"]     = { other = "Auction House" };
-acq["Ice Carol"]         = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Ice Carol II"]      = { other = "Auction House" };
-acq["Wind Carol"]        = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Wind Carol II"]     = { other = "Auction House" };
-acq["Earth Carol"]       = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Earth Carol II"]    = { other = "Auction House" };
-acq["Lightning Carol"]   = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Lightning Carol II"]= { other = "Auction House" };
-acq["Water Carol"]       = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Water Carol II"]    = { other = "Auction House" };
-acq["Light Carol"]       = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Light Carol II"]    = { other = "Auction House" };
-acq["Dark Carol"]        = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Dark Carol II"]     = { other = "Auction House" };
-
--- Threnodies
-acq["Fire Threnody"]     = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Ice Threnody"]      = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Wind Threnody"]     = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Earth Threnody"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Ltng. Threnody"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Water Threnody"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Light Threnody"]    = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
-acq["Dark Threnody"]     = { quest = "Mertaire (Lower Jeuno)", other = "Auction House" };
+acq["Advancing March"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Adventurer's Dirge"] = { vendor = "Harmodios (Bastok Markets)" };
+acq["Archer's Prelude"] = { drop = "Orcish Farkiller (Monastic Cavern) / Antican Aedilis (Quicksand Caves) / Jotunn Wallkeeper (Upper Delkfutt's Tower)", other = "Auction House" };
+acq["Aria of Passion"] = { other = "Auction House" };
+acq["Army's Paeon"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Army's Paeon II"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Army's Paeon III"] = { vendor = "Hortense (Bastok Markets) / Toji Mumosulah (Kazham)" };
+acq["Army's Paeon IV"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Army's Paeon V"] = { drop = "Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Army's Paeon VI"] = { vendor = "Hortense (Bastok Markets)", drop = "Vemosia (Cirdas Caverns) / Stinkskin (Moh Gates) / Furious Arundmite (Sih Gates) / Cowll Hippogryph (Woh Gates) / Dreadpincer (Dho Gates)", other = "Auction House" };
+acq["Battlefield Elegy"] = { vendor = "Thadiene (Southern San d'Oria)" };
+acq["Bewitching Etude"] = { vendor = "Harmodios (Bastok Markets)", drop = "Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Blade Madrigal"] = { drop = "Yagudo Lutenist (Castle Zvahl Baileys) / Yagudo Drummer (Fort Karugo-Narugo (S)) / Yagudo Piper (West Sarutabaruta (S))", other = "Auction House" };
+acq["Carnage Elegy"] = { drop = "Yagudo Chanter (Castle Oztroja)", other = "Auction House" };
+acq["Chocobo Mazurka"] = { vendor = "Ferdoulemiont (Southern San d'Oria) / Neigepance (Bastok Mines) / Quesse (Windurst Woods) / Generoit (Rabao) / Mamerie (Kazham)", drop = "Abyss Sahagin (Sea Serpent Grotto) / Yagudo Conductor (Castle Oztroja) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Dark Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Dark Carol II"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Mired Orthrus (Maquette Abdhaljs-Legion) / Mired Mantis (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Dark Threnody"] = { vendor = "Mjoll (Bastok Markets)" };
+acq["Dark Threnody II"] = { other = "Auction House" };
+acq["Dextrous Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Dragonfoe Mambo"] = { drop = "Yagudo Lutenist (Castle Zvahl Baileys) / Yagudo Piper (West Sarutabaruta (S)) / Yagudo Drummer (Fort Karugo-Narugo (S))", other = "Auction House" };
+acq["Earth Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Earth Carol II"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]", drop = "Ouryu (Monarch Linn) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater) / Ark Angel EV (La'Loff Amphitheater)", other = "Auction House" };
+acq["Earth Threnody"] = { vendor = "Ensasa (Windurst Waters North)" };
+acq["Earth Threnody II"] = { other = "Auction House" };
+acq["Enchanting Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Fire Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Fire Carol II"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]", drop = "Vemosia (Cirdas Caverns) / Ark Angel GK (La'Loff Amphitheater) / Cowll Hippogryph (Woh Gates) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel HM (La'Loff Amphitheater)", other = "Auction House" };
+acq["Fire Threnody"] = { vendor = "Ensasa (Windurst Waters North)" };
+acq["Fire Threnody II"] = { other = "Auction House" };
+acq["Foe Lullaby"] = { drop = "Yagudo Piper (Giddeus)", other = "Auction House" };
+acq["Foe Lullaby II"] = { vendor = "Toji Mumosulah (Kazham)", drop = "Ark Angel HM (La'Loff Amphitheater) / Vemosia (Cirdas Caverns) / Ark Angel GK (La'Loff Amphitheater) / Dreadpincer (Dho Gates) / Ark Angel TT (La'Loff Amphitheater)", other = "Auction House" };
+acq["Foe Requiem"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Foe Requiem II"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Foe Requiem III"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Foe Requiem IV"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Foe Requiem V"] = { drop = "Yagudo Chanter (Castle Oztroja)", other = "Auction House" };
+acq["Foe Requiem VI"] = { drop = "Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Coastal Sahagin (Sea Serpent Grotto) / Yagudo Conductor (Castle Oztroja)", other = "Auction House" };
+acq["Foe Requiem VII"] = { vendor = "Hortense (Bastok Markets)", drop = "Cowll Hippogryph (Woh Gates) / Furious Arundmite (Sih Gates) / Dreadpincer (Dho Gates) / Vemosia (Cirdas Caverns)", other = "Auction House" };
+acq["Foe Sirvente"] = { vendor = "Harmodios (Bastok Markets)" };
+acq["Fowl Aubade"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Goblin Gavotte"] = { vendor = "Creepstix (Lower Jeuno)" };
+acq["Goddess's Hymnus"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]", drop = "Yagudo Conductor (Castle Oztroja) / Yagudo Lutenist (Garlaige Citadel (S)) / Yagudo Chanter (Meriphataud Mountains (S))", other = "Auction House" };
+acq["Gold Capriccio"] = { drop = "Yagudo Chanter (Castle Zvahl Keep)", other = "Auction House" };
+acq["Herb Pastoral"] = { vendor = "Wije Tiren (Windurst Woods)" };
+acq["Herculean Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]", drop = "Abyss Sahagin (Sea Serpent Grotto) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Honor March"] = { other = "Auction House" };
+acq["Horde Lullaby"] = { drop = "Yagudo Drummer (Castle Oztroja)", other = "Auction House" };
+acq["Horde Lullaby II"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Hunter's Prelude"] = { vendor = "Mono Nchaa (Windurst Woods)" };
+acq["Ice Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Ice Carol II"] = { drop = "Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Ice Threnody"] = { vendor = "Mjoll (Bastok Markets)" };
+acq["Ice Threnody II"] = { other = "Auction House" };
+acq["Knight's Minne"] = { vendor = "Ferdoulemiont (Southern San d'Oria)" };
+acq["Knight's Minne II"] = { vendor = "Ferdoulemiont (Southern San d'Oria)" };
+acq["Knight's Minne III"] = { vendor = "Ferdoulemiont (Southern San d'Oria)" };
+acq["Knight's Minne IV"] = { drop = "Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Yagudo Conductor (Castle Oztroja) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Knight's Minne V"] = { vendor = "Ferdoulemiont (Southern San d'Oria)", drop = "Stinkskin (Moh Gates) / Furious Arundmite (Sih Gates) / Vemosia (Cirdas Caverns) / Cowll Hippogryph (Woh Gates) / Dreadpincer (Dho Gates)", other = "Auction House" };
+acq["Learned Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Light Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Light Carol II"] = { drop = "Soaring Dweorg (Maquette Abdhaljs-Legion) / Paramount Gallu (Maquette Abdhaljs-Legion) / Lofty Elasmoth (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Light Threnody"] = { vendor = "Lusiane (Southern San d'Oria)" };
+acq["Light Threnody II"] = { other = "Auction House" };
+acq["Lightning Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Lightning Carol II"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Mantis (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Logical Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]", drop = "Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Ltng. Threnody"] = { vendor = "Lusiane (Southern San d'Oria)" };
+acq["Ltng. Threnody II"] = { other = "Auction House" };
+acq["Mage's Ballad"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Intermediate Teamwork", drop = "Vuu Puqu the Beguiler (Giddeus) / Yagudo Piper (Meriphataud Mountains)", other = "Auction House" };
+acq["Mage's Ballad II"] = { other = "Auction House" };
+acq["Mage's Ballad III"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]", drop = "Gessho (Talacca Cove) / Ouryu (Monarch Linn) / Dreadpincer (Dho Gates) / Tenzen (Sealion's Den) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };
+acq["Magic Finale"] = { drop = "Yagudo Drummer (Castle Oztroja)", other = "Auction House" };
+acq["Maiden's Virelai"] = { drop = "Abyss Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Massacre Elegy"] = { other = "Auction House" };
+acq["Pining Nocturne"] = { drop = "Paramount Gallu (Maquette Abdhaljs-Legion) / Paramount Ironclad (Maquette Abdhaljs-Legion) / Veiled Ironclad (Maquette Abdhaljs-Legion) / Paramount Botulus (Maquette Abdhaljs-Legion) / Paramount Harpeia (Maquette Abdhaljs-Legion)", other = "Auction House" };
+acq["Puppet's Operetta"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Quick Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Raptor Mazurka"] = { vendor = "Khaf Jhifanm (Aht Urhgan Whitegate)" };
+acq["Sage Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]", drop = "Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Coastal Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Scop's Operetta"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Sentinel's Scherzo"] = { vendor = "Yoskolo (Lower Jeuno)", drop = "Dreadpincer (Dho Gates) / Ark Angel MR (La'Loff Amphitheater) / Ouryu (Monarch Linn) / Cowll Hippogryph (Woh Gates) / Ark Angel EV (La'Loff Amphitheater)", other = "Auction House" };
+acq["Sheepfoe Mambo"] = { vendor = "Dohdjuma (Selbina)" };
+acq["Shining Fantasia"] = { drop = "Yagudo Conductor (Castle Oztroja)", other = "Auction House" };
+acq["Sinewy Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Spirited Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Swift Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]", drop = "Coastal Sahagin (Sea Serpent Grotto) / Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto)", other = "Auction House" };
+acq["Sword Madrigal"] = { vendor = "Boncort (Northern San d'Oria)" };
+acq["Uncanny Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]", drop = "Coastal Sahagin (Sea Serpent Grotto) / Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto)", other = "Auction House" };
+acq["Valor Minuet"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Valor Minuet II"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Valor Minuet III"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Valor Minuet IV"] = { drop = "Coastal Sahagin (Sea Serpent Grotto) / Abyss Sahagin (Sea Serpent Grotto) / Denn the Orcavoiced (Sea Serpent Grotto) / Yagudo Conductor (Castle Oztroja)", other = "Auction House" };
+acq["Valor Minuet V"] = { vendor = "Hortense (Bastok Markets)" };
+acq["Victory March"] = { drop = "Yagudo Conductor (Castle Oztroja) / Abyss Sahagin (Sea Serpent Grotto)", other = "Auction House" };
+acq["Vital Etude"] = { vendor = "Harmodios (Bastok Markets) [Conquest]" };
+acq["Vivacious Etude"] = { vendor = "Manyny (Windurst Woods) / Leyla (Port Jeuno)" };
+acq["Warding Round"] = { other = "Auction House" };
+acq["Water Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Water Carol II"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Water Threnody"] = { vendor = "Champalpieu (Upper Jeuno)" };
+acq["Water Threnody II"] = { other = "Auction House" };
+acq["Wind Carol"] = { vendor = "Yoskolo (Lower Jeuno)" };
+acq["Wind Carol II"] = { vendor = "Valeriano (Port Bastok) [Conquest] / Valeriano (Southern San d'Oria) [Conquest] / Valeriano (Windurst Woods) [Conquest]" };
+acq["Wind Threnody"] = { vendor = "Champalpieu (Upper Jeuno)" };
+acq["Wind Threnody II"] = { other = "Auction House" };
 
 ----------------------------------------------------------------------------------------------------
 -- Summoning Magic
 ----------------------------------------------------------------------------------------------------
 
-acq["Carbuncle"]       = { quest = "The Carbuncle Debacle (Windurst)" };
-acq["Fire Spirit"]     = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Ice Spirit"]      = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Air Spirit"]      = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Earth Spirit"]    = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Thunder Spirit"]  = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Water Spirit"]    = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Light Spirit"]    = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Dark Spirit"]     = { vendor = "Mapitoto (Windurst Walls)" };
-acq["Ifrit"]           = { quest = "Trial by Fire (Cloister of Flames)" };
-acq["Shiva"]           = { quest = "Trial by Ice (Cloister of Frost)" };
-acq["Garuda"]          = { quest = "Trial by Wind (Cloister of Gales)" };
-acq["Titan"]           = { quest = "Trial by Earth (Cloister of Tremors)" };
-acq["Ramuh"]           = { quest = "Trial by Lightning (Cloister of Storms)" };
-acq["Leviathan"]       = { quest = "Trial by Water (Cloister of Tides)" };
-acq["Fenrir"]          = { quest = "The Moonlit Path (Full Moon Fountain)" };
-acq["Diabolos"]        = { quest = "Waking Dreams (Pso'Xja)" };
-acq["Alexander"]       = { quest = "Divine Might (Ru'Aun Gardens)" };
-acq["Odin"]            = { quest = "The Dark Divide (Hazhalm Testing Grounds)" };
+acq["Air Spirit"] = { drop = "Yagudo Oracle (Sauromugue Champaign, Castle Oztroja, Fort Karugo-Narugo (S)) / Yagudo Mendicant (West Sarutabaruta (S)) / Yagudo Pythoness (Sauromugue Champaign (S), Garlaige Citadel (S)) / Yagudo Prioress (Meriphataud Mountains (S), Castle Oztroja (S)) / Yagudo Avatar (Castle Oztroja)", other = "Auction House" };
+acq["Alexander"] = { quest = "Divine Might (Ru'Aun Gardens)" };
+acq["Atomos"] = { quest = "Remembering the Past (Walk of Echoes)" };
+acq["Cait Sith"] = { quest = "A Manifest Problem (Throne Room [S])" };
+acq["Carbuncle"] = { quest = "The Carbuncle Debacle (Windurst)" };
+acq["Dark Spirit"] = { drop = "Viscount Morax (Castle Zvahl Keep) / Kindred Summoner (Uleguerand Range)", other = "Auction House" };
+acq["Diabolos"] = { quest = "Waking Dreams (Pso'Xja)" };
+acq["Earth Spirit"] = { vendor = "Solby-Maholby (Norg)" };
+acq["Fenrir"] = { quest = "The Moonlit Path (Full Moon Fountain)" };
+acq["Fire Spirit"] = { other = "Auction House" };
+acq["Garuda"] = { quest = "Trial by Wind (Cloister of Gales)" };
+acq["Ice Spirit"] = { drop = "Demon Warlock (Xarcabard, Castle Zvahl Baileys, Castle Zvahl Keep) / Demon Magistrate (Castle Zvahl Baileys) / Abyssal Demon (Castle Zvahl Baileys) / Stygian Demon (Castle Zvahl Baileys, Uleguerand Range)", other = "Auction House" };
+acq["Ifrit"] = { quest = "Trial by Fire (Cloister of Flames)" };
+acq["Leviathan"] = { quest = "Trial by Water (Cloister of Tides)" };
+acq["Light Spirit"] = { quest = "Allied Union - Defeat Vee Qiqa the Decreer in Campaign Battles against", drop = "Crimson-toothed Pawberry (Temple of Uggalepih) / Sozu Terberry (Temple of Uggalepih) / Tonberry Kinq (Temple of Uggalepih)", other = "Auction House" };
+acq["Odin"] = { quest = "The Dark Divide (Hazhalm Testing Grounds)" };
+acq["Ramuh"] = { quest = "Trial by Lightning (Cloister of Storms)" };
+acq["Shiva"] = { quest = "Trial by Ice (Cloister of Frost)" };
+acq["Siren"] = { quest = "Trials of the Sirens" };
+acq["Thunder Spirit"] = { other = "Auction House" };
+acq["Titan"] = { quest = "Trial by Earth (Cloister of Tremors)" };
+acq["Water Spirit"] = { drop = "Tonberry Harrier (Temple of Uggalepih) / Cryptonberry Harrier (Pso'Xja) / Tonberry Dismayer (Temple of Uggalepih) / Tonberry Beleaguerer (Den of Rancor) / Tonberry Kinq (Temple of Uggalepih)", other = "Auction House" };
+
+----------------------------------------------------------------------------------------------------
+-- Geomancy
+----------------------------------------------------------------------------------------------------
+
+acq["Geo-AGI"] = { other = "Auction House" };
+acq["Geo-Acumen"] = { other = "Auction House" };
+acq["Geo-Attunement"] = { other = "Auction House" };
+acq["Geo-Barrier"] = { other = "Auction House" };
+acq["Geo-CHR"] = { other = "Auction House" };
+acq["Geo-DEX"] = { other = "Auction House" };
+acq["Geo-Fade"] = { other = "Auction House" };
+acq["Geo-Fend"] = { other = "Auction House" };
+acq["Geo-Focus"] = { other = "Auction House" };
+acq["Geo-Frailty"] = { other = "Auction House" };
+acq["Geo-Fury"] = { other = "Auction House" };
+acq["Geo-Gravity"] = { other = "Auction House" };
+acq["Geo-Haste"] = { other = "Auction House" };
+acq["Geo-INT"] = { other = "Auction House" };
+acq["Geo-Languor"] = { other = "Auction House" };
+acq["Geo-MND"] = { other = "Auction House" };
+acq["Geo-Malaise"] = { other = "Auction House" };
+acq["Geo-Paralysis"] = { other = "Auction House" };
+acq["Geo-Poison"] = { other = "Auction House" };
+acq["Geo-Precision"] = { other = "Auction House" };
+acq["Geo-Refresh"] = { other = "Auction House" };
+acq["Geo-Regen"] = { other = "Auction House" };
+acq["Geo-STR"] = { other = "Auction House" };
+acq["Geo-Slip"] = { other = "Auction House" };
+acq["Geo-Slow"] = { other = "Auction House" };
+acq["Geo-Torpor"] = { other = "Auction House" };
+acq["Geo-VIT"] = { other = "Auction House" };
+acq["Geo-Vex"] = { other = "Auction House" };
+acq["Geo-Voidance"] = { other = "Auction House" };
+acq["Geo-Wilt"] = { other = "Auction House" };
+acq["Indi-AGI"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Acumen"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Attunement"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Barrier"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-CHR"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-DEX"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Fade"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Fend"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Focus"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Frailty"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Fury"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Gravity"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Haste"] = { other = "Auction House" };
+acq["Indi-INT"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Languor"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-MND"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Malaise"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Paralysis"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Poison"] = { vendor = "Ishvad (Western Adoulin)", quest = "Dances with Luopans - Geomancer Job Quest" };
+acq["Indi-Precision"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Refresh"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Regen"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-STR"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Slip"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Slow"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Torpor"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-VIT"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Vex"] = { vendor = "Eukalline (Western Adoulin)" };
+acq["Indi-Voidance"] = { vendor = "Ishvad (Western Adoulin)" };
+acq["Indi-Wilt"] = { vendor = "Eukalline (Western Adoulin)" };
 
 return acq;
