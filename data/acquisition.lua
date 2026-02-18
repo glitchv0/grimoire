@@ -105,7 +105,7 @@ acq["Barvira"] = { vendor = "Hasim (Lower Jeuno)" };
 acq["Barvirus"] = { vendor = "Hasim (Lower Jeuno)" };
 acq["Barwater"] = { vendor = "Hasim (Lower Jeuno)" };
 acq["Barwatera"] = { vendor = "Hasim (Lower Jeuno)" };
-acq["Blaze Spikes"] = { vendor = "Amalasanda (Lower Jeuno)", quest = "Know One's Onions" };
+acq["Blaze Spikes"] = { quest = "Know One's Onions" };
 acq["Blink"] = { vendor = "Regine (Port San d'Oria) [Conquest] / Kususu (Port Windurst) [Conquest] / Sororo (Bastok Markets) [Conquest]" };
 acq["Boost-AGI"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Ouryu (Monarch Linn) / Stinkskin (Moh Gates) / Ark Angel HM (La'Loff Amphitheater) / Ark Angel MR (La'Loff Amphitheater) / Ark Angel GK (La'Loff Amphitheater)", other = "Auction House" };
 acq["Boost-CHR"] = { vendor = "Hasim (Lower Jeuno) / Creepstix (Lower Jeuno)", drop = "Mnejing (Jade Sepulcher) / Jasweem (Jade Sepulcher) / Gessho (Talacca Cove) / Vemosia (Cirdas Caverns) / Ark Angel MR (La'Loff Amphitheater)", other = "Auction House" };

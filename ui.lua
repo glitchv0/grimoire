@@ -99,6 +99,15 @@ function ui.refresh_spells()
                     end
                 end
 
+                -- Skip avatar/unlearnable spells..
+                local excluded = T{
+                    'Diaga II', 'Bindga', 'Blindga', 'Hastega',
+                    'Paralyga', 'Silencega', 'Slowga',
+                };
+                if (excluded:hasval(spell.Name[1])) then
+                    any_job = false;
+                end
+
                 if (any_job) then
                     -- Find lowest level for sorting..
                     local min_lvl = 999;
